@@ -1,11 +1,11 @@
 import pygame
-from pygame import mixer
+# from pygame import mixer
 import os
 import random
 import csv
 import button
 
-mixer.init()
+# mixer.init()
 pygame.init()
 
 screen_width = 800
@@ -289,6 +289,7 @@ class Unit(pygame.sprite.Sprite):
                     self.move_counter += 1
                     # update ai vision as enemy moves
                     self.vision.center = (self.rect.centerx + 225 * self.direction, self.rect.centery)
+                    pygame.draw.rect(screen, RED, self.vision)
                     if self.move_counter > TILE_SIZE:
                         self.direction *= -1
                         self.move_counter *= -1
