@@ -1,11 +1,11 @@
 import pygame
-# from pygame import mixer
+from pygame import mixer
 import os
 import random
 import csv
 import button
 
-# mixer.init()
+mixer.init()
 pygame.init()
 
 screen_width = 800
